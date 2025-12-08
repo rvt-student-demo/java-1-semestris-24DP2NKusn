@@ -50,10 +50,6 @@ public class Chapter44 {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter cook time: ");
             String Time = input.nextLine();
-            
-
-            int Minutes;
-            int Seconds;
 
             if (2 <= Time.length()) {
                 

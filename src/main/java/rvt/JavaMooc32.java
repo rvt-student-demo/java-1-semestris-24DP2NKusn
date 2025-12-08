@@ -2,7 +2,7 @@ package rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class JMArrayList {
+public class JavaMooc32 {
     public static void main(String[] args) {
         RemoveLast();
     }

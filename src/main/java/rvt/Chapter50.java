@@ -32,6 +32,12 @@ class Box {
     private double topArea() { return this.width * this.length; }
     private double sideArea() { return this.height * this.length; }
 
+    public Box(Box oldBox) {
+        this(oldBox.width, oldBox.height, oldBox.length);
+    }
 
+    public double length() { return this.length; }
+    public double height() { return this.height; }
+    public double width()  { return this.width; }
 
 }

@@ -14,6 +14,5 @@ public static void divisibleByThreeInRange(int start, int end){
     }
 
 }
-
 }
 

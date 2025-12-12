@@ -46,7 +46,28 @@ public class Chapter44 {
             System.out.println(UserName);
         }
     }
-    public static void ex4() {}
+    public static void ex4() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter cook time: ");
+        String time = scanner.nextLine().trim();
+
+        String minutes; 
+        String seconds;
+
+        if (time.length() <= 2) {
+            minutes = "0";
+            seconds = time;
+        } else {
+            minutes = time.substring(0, time.length() - 2);
+            seconds = time.substring(time.length() - 2);
+        }
+
+        if (seconds.length() == 1) {
+            seconds = "0" + seconds;
+        }
+        System.out.println("Your time-> " + minutes + ":" + seconds);
+    }
     public static void ex5() {}
     public static void ex6() {}
     public static void ex7() {}

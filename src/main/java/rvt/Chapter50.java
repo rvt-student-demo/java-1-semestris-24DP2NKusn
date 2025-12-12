@@ -40,4 +40,11 @@ class Box {
     public double height() { return this.height; }
     public double width()  { return this.width; }
 
+    public Box biggerBox(Box oldBox) {
+        return new Box(1.25 * oldBox.width(), 1.25 * oldBox.height(), 1.25 * oldBox.length());
+    }
+
+    public Box smallerBox(Box oldBox) {
+        return new Box(0.75 * oldBox.width(), 0.75 * oldBox.height(), 0.75 * oldBox.length());
+    }
 }

@@ -147,5 +147,29 @@ public class Chapter44 {
             }
         }
     }
-    public static void ex7() {}
-}
+    public static void ex7() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a word --> ");
+        String word = scanner.nextLine();
+
+        int leftSpaces = 0;
+        String current = word;
+
+        while(current.length() > 0) {
+
+            for (int i = 0; i < leftSpaces; i++) {
+                System.out.print(" ");
+            }
+
+            System.out.println(current);
+
+            leftSpaces++;
+            if (current.length() <= 1) {
+                break;
+            }
+            current = current.substring(1, current.length() - 1);
+        } 
+    }
+    }
+

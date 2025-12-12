@@ -79,7 +79,39 @@ public class Chapter44 {
             }
         }
     }
-    public static void ex6() {}
+    public static void ex5_BetterVersion() {
+        Scanner scanner = new Scanner(System.in);
+        boolean inBlock = false;
+
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String t = line.trim();
+
+            if (t.startsWith("///")) {
+                System.out.println(line);
+                continue;
+            }
+
+            if (t.startsWith("/**")) {
+                inBlock = true;
+                System.out.println(line);
+                continue;
+            }
+
+            if (t.startsWith("*")) {
+                System.out.println(line);
+                continue;
+            }
+
+            if (inBlock) {
+                System.out.println(line);
+            }
+
+            if (t.startsWith("*/")) {
+                inBlock = false;
+            }
+        }
+    }
     public static void ex7() {}
 
 }

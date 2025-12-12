@@ -23,4 +23,15 @@ class Box {
     public double volume() {
         return this.width * this.height * this.length;
     }
+
+    public double area() {
+        return 2 * faceArea() + 2 * topArea() + 2 * sideArea();
+    }
+
+    private double faceArea() { return this.width * this.height; }
+    private double topArea() { return this.width * this.length; }
+    private double sideArea() { return this.height * this.length; }
+
+
+
 }

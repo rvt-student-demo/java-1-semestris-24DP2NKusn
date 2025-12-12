@@ -22,4 +22,18 @@ public class OverloadedCounter {
     public void decrease() {
         this.value--;
     }
+
+    public void increase(int increaseBy) {
+        if (increaseBy < 0) {
+            return;
+        }
+        this.value += increaseBy;
+    }
+
+    public void decrease(int decreaseBy) {
+        if (decreaseBy < 0) {
+            return;
+        }
+        this.value -= decreaseBy;
+    }
 }

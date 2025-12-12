@@ -112,6 +112,40 @@ public class Chapter44 {
             }
         }
     }
-    public static void ex7() {}
+    public static void ex6() {
+        Scanner scanner = new Scanner(System.in);
 
+        while(true) {
+            
+            System.out.println("Enter your password: ");
+            String password = scanner.nextLine();
+
+            if (password.length() < 7) {
+                System.out.println("That password is not acceptable.");
+                System.out.println();
+                continue;
+            }
+
+            boolean hasUpper = false;
+            boolean hasLower = false;
+            boolean hasDigit = false;
+
+            for (int i = 0; i < password.length(); i++) {
+                char ch = password.charAt(i);
+
+                if (Character.isUpperCase(ch)) hasUpper = true;
+                if(Character.isLowerCase(ch)) hasLower = true;
+                if(Character.isDigit(ch)) hasDigit = true;
+            }
+
+            if(hasUpper && hasLower && hasDigit) {
+                System.out.println("Acceptable password.");
+                break;
+            } else {
+                System.out.println("That password is not acceptable.");
+                System.out.println();
+            }
+        }
+    }
+    public static void ex7() {}
 }

@@ -68,7 +68,17 @@ public class Chapter44 {
         }
         System.out.println("Your time-> " + minutes + ":" + seconds);
     }
-    public static void ex5() {}
+    public static void ex5() {
+        Scanner scanner = new Scanner(System.in);
+
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+
+            if (line.startsWith("//")) {
+                System.out.println(line);
+            }
+        }
+    }
     public static void ex6() {}
     public static void ex7() {}
 
